@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World App</title>
+</head>
+<body>
+    <button id="callApiButton">APIを呼び出す</button>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('callApiButton').addEventListener('click', async () => {
+            try {
+                const response = await fetch('http://localhost:8080/hello');
+                const data = await response.text();
+                document.getElementById('result').innerText = data;
+            } catch (error) {
+                console.error('API呼び出しエラー:', error);
+            }
+        });
+    </script>
+</body>
+</html>

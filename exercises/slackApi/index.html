@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slack Message Sender</title>
+</head>
+<body>
+    <h1>Slack Message Sender</h1>
+
+    <div class="form-container">
+        <div>
+            <label for="channelSelect">Select Channel:</label>
+            <select id="channelSelect">
+                <!--<option value="C06FF7CMJQM"># 泉_検証用</option>
+                <option value="C06EWJWHJ3A"># 検証用</option>-->
+            </select>
+        </div>
+
+        <div>
+            <label for="memberSelect">Select Member:</label>
+            <select id="memberSelect">
+                <!--<option value="U06EWJUA8HW">motoya-izumi</option>
+                <option value="U06PQ62GW59">Aoi Shirakawa</option>-->
+            </select>
+        </div>
+
+        <div>
+            <label for="messageInput">Input Message:</label>
+        </div>
+
+        <div>
+            <textarea id="messageInput"></textarea>
+        </div>
+
+        <div>
+            <button id="sendMessageButton">Send Message</button>
+        </div>
+
+        <div id="messageResult"></div>
+    </div>
+
+    <script src="slack.js"></script>
+</body>
+</html>
