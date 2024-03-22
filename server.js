@@ -3,6 +3,8 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
+app.use(express.static(path.join(__dirname, 'scripts')));
+
 app.get('/hello', (req, res) => {
     res.sendFile(path.join(__dirname, 'exercises', 'crossOrigin', 'index.html'));
 });
@@ -12,7 +14,7 @@ app.get('/slack', (req, res) => {
 });
 
 app.get('/assignment', (req, res) => {
-    res.sendFile(path.join(__dirname, 'assignment', 'index.html'));
+    res.sendFile(path.join(__dirname, 'assignments', 'index.html'));
 });
 
 app.listen(PORT, () => {
